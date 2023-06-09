@@ -11,13 +11,12 @@ public class AtbilžuSkripts : MonoBehaviour {
 		
 		if (irPareizs) {
 			
-			Debug.Log ("Pareizá atbilde");
 			quizManager.Pareizs();
 
 		} else {
 			
-			Debug.Log ("Nepareiza atbilde");
-			quizManager.Pareizs();
+			quizManager.Nepareizs();
+
 		}
 	}
 }

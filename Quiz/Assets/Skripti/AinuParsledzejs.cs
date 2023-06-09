@@ -25,5 +25,10 @@ public class AinuParsledzejs : MonoBehaviour {
         //if(parslegt==true)
          SceneManager.LoadScene("BeiguEkrans", LoadSceneMode.Single); ;
     }
+
+	//Iziet no spéles
+	public void IzietNoSpeles(){
+		Application.Quit ();
+	}
         
 }
