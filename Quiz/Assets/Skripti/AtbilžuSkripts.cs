@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AtbilžuSkripts : MonoBehaviour {
 
-	public bool irPareizs = false;
+	public bool irPareizs = false;	
 	public QuizManager quizManager;
 
 	public void Atbilde(){

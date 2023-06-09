@@ -7,9 +7,13 @@ public class QuizManager : MonoBehaviour {
 
 	public List<JautajumiUnAtbildes> JuA;
 	public GameObject[] opcijas;
-	public int pasreizejaisJautajums;
+	public GameObject[] Pogas;
 
-	public Text JautajumuTeksts;
+	//public AinuParsledzejs ParslegtAinu;
+    public Text JautajumuTeksts;
+
+    public int pasreizejaisJautajums;
+	public static int JautajumuSkaits = 0;
 
 	private void Start(){
 		GeneretJautajumu ();
@@ -17,7 +21,25 @@ public class QuizManager : MonoBehaviour {
 
 	public void Pareizs(){
 		JuA.RemoveAt(pasreizejaisJautajums);
-		GeneretJautajumu();
+
+		JautajumuSkaits++;
+		Debug.Log("Atbildētie Jautājumi: " + JautajumuSkaits);
+
+		if (JautajumuSkaits == 10)
+		{
+			//bool parslegt = true;
+			//ParslegtAinu.BeiguEkrans(parslegt);
+			Pogas[0].SetActive(false);
+            Pogas[1].SetActive(false);
+            Pogas[2].SetActive(false);
+            Pogas[3].SetActive(false);
+            Pogas[4].SetActive(true);
+
+        }
+		else
+		{
+			GeneretJautajumu();
+		}
 	}
 
 	void SetAtbildes(){
