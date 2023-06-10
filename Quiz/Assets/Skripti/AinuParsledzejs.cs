@@ -19,11 +19,10 @@ public class AinuParsledzejs : MonoBehaviour {
         SceneManager.LoadScene("Quiz", LoadSceneMode.Single);
     }
 
-    //Párslédz ainu uz beiga ekránu
-    public void BeiguEkrans()
+    //Atsákt testu no jauna
+    public void AtsaktTestu()
     {
-        //if(parslegt==true)
-         SceneManager.LoadScene("BeiguEkrans", LoadSceneMode.Single); ;
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
     }
 
 	//Iziet no spéles

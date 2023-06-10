@@ -67,7 +67,7 @@ public class QuizManager : MonoBehaviour {
 			opcijas [i].GetComponent<AtbilžuSkripts> ().irPareizs = false;
 			opcijas[i].transform.GetChild(0).GetComponent<Text>().text = JuA[pasreizejaisJautajums].Atbildes[i];
 
-			if (JuA [pasreizejaisJautajums].PareizaAtbilde == i + 1) {
+			if (JuA [pasreizejaisJautajums].PareizaAtbilde == i + 1) {	
 				opcijas [i].GetComponent<AtbilžuSkripts> ().irPareizs = true;
 				AtbilzuTeksts.text += JuA [pasreizejaisJautajums].Jautajums+" - Pareizá atbilde bija: ''"+JuA[pasreizejaisJautajums].Atbildes[i]+"''\n";
 			}
